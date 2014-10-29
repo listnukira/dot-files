@@ -9,15 +9,15 @@
 
 
 " check vundle
-let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
 if filereadable(vundle_readme)
     source ~/.vim/vundle.vimrc
 else
     echo "Installing Vundle..."
     silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+    silent !git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
     source ~/.vim/vundle.vimrc
-    :BundleInstall
+    :PluginInstall
     :qa!
 endif
 
@@ -35,6 +35,7 @@ endif
 
 
 " personal setting
+set nocompatible
 set encoding=utf-8
 set fileencoding=utf-8
 set termencoding=utf-8
@@ -55,9 +56,11 @@ autocmd FileType make setlocal noexpandtab
 
 " folding
 set foldmethod=syntax
-set foldlevel=99
+set foldlevel=20
 set foldcolumn=2
 let g:php_folding=2
+let g:xml_syntax_folding=1
+let javascript_enable_domhtmlcss=1
 nmap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 
 set laststatus=2
@@ -65,11 +68,14 @@ set statusline=%t\%r%h%w\ %m%=\ %{&fileencoding}\ [%{&ff}]\ [AscII=\%03.3b]\ [He
 
 " for cscope use "
 if has("cscope")
-    set csto=1
+    " 0 : cscope.out first; 1 : ctags first
+    set csto=0
     set cst
     set nocsverb
+    " add any database in current directory
     if filereadable("cscope.out")
         cs add cscope.out
+    " else add databse pointed to by environment
     elseif $CSCOPE_DB != ""
         cs add $CSCOPE_DB
     endif
@@ -82,6 +88,10 @@ nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
 nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
 nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+
+" disable F1 built-in help key, remap to Esc
+map <F1> <Esc>
+imap <F1> <Esc>
 
 " key mapping
 map <silent> <F4> :set fdc=0<CR>:set nonu<CR>:set paste<CR>

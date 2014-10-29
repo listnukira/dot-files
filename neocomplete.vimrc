@@ -8,6 +8,8 @@ let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+" Set max list
+let g:neocomplete#max_list = 5
 
 " only prefix match
 let g:neocomplete#enable_fuzzy_completion = 0

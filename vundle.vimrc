@@ -6,32 +6,35 @@ call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/Vundle.vim'
+Plugin 'gmarik/Vundle.vim'
 
 " My bundles here:
 
 " A low-contrast vim color scheme based on Seoul Colors
-Bundle 'junegunn/seoul256.vim'
+Plugin 'junegunn/seoul256.vim'
 
 " neocomplete framework
-Bundle 'Shougo/neocomplete.vim'
-Bundle 'Shougo/neosnippet.vim'
-Bundle 'Shougo/neosnippet-snippets'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/neosnippet.vim'
+Plugin 'Shougo/neosnippet-snippets'
 
 " Use clang for completing C/C++ code
-Bundle 'Rip-Rip/clang_complete'
+Plugin 'Rip-Rip/clang_complete'
 
 " Always highlights the enclosing html/xml tags
-Bundle 'Valloric/MatchTagAlways'
+Plugin 'Valloric/MatchTagAlways'
 
 " Auto close pair of characters
-Bundle 'vim-scripts/AutoClose--Alves'
+Plugin 'vim-scripts/AutoClose--Alves'
 
 " Vastly improved javascript indentation and syntax support
-Bundle 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
 
 " Toggle, display and navigate marks
-Bundle 'kshenoy/vim-signature'
+Plugin 'kshenoy/vim-signature'
+
+" extended % matching for html, LaTex and many other languages
+Plugin 'vim-scripts/matchit.zip'
 
 " End of My bundles
 

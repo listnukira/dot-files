@@ -11,6 +11,9 @@ if [ -z $TMUX ]; then
     export PATH="/home/chwhsu/local/bin/:$PATH"
 fi
 
+# undef terminal flow control signal
+stty stop undef
+
 #
 # bash prompts
 #

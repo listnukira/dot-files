@@ -13,7 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 " A low-contrast vim color scheme based on Seoul Colors
 Plugin 'junegunn/seoul256.vim'
 
-" neocomplete framework
+" Neocomplete framework
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neosnippet.vim'
 Plugin 'Shougo/neosnippet-snippets'
@@ -33,8 +33,11 @@ Plugin 'pangloss/vim-javascript'
 " Toggle, display and navigate marks
 Plugin 'kshenoy/vim-signature'
 
-" extended % matching for html, LaTex and many other languages
+" Extended % matching for html, LaTex and many other languages
 Plugin 'vim-scripts/matchit.zip'
+
+" Easily delete, change and add surroundings in pairs
+Plugin 'tpope/vim-surround'
 
 " End of My bundles
 

@@ -10,10 +10,10 @@ mkdir -p backup
 
 # copy
 cp vimrc ~/.vimrc
-#cp bashrc ~/.bashrc
-#cp bash_profile ~/.bash_profile
-#cp tmux.conf ~/.tmux.conf
-#cp gitconfig ~/.gitconfig
+cp bashrc ~/.bashrc
+cp bash_profile ~/.bash_profile
+cp tmux.conf ~/.tmux.conf
+cp gitconfig ~/.gitconfig
 
 mkdir -p ~/.vim
 cp neocomplete.vimrc ~/.vim/neocomplete.vimrc

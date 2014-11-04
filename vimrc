@@ -94,8 +94,7 @@ map <F1> <Esc>
 imap <F1> <Esc>
 
 " key mapping
-map <silent> <F4> :set fdc=0<CR>:set nonu<CR>:set paste<CR>
-map <silent> <F3> :set fdc=2<CR>:set nu<CR>:set nopaste<CR>
+map <silent> <F4> :call MyDisplayToggle()<CR>
 nmap <F2> :w<CR>
 imap <F2> <Esc>:w<CR>
 
@@ -104,3 +103,21 @@ nnoremap ; :
 " Auto close
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {{ {
+
+" function
+function MyDisplayToggle()
+    let b:my_display_enabled = exists('b:my_display_enabled') ? !b:my_display_enabled : 0
+    if b:my_display_enabled
+        set fdc=2
+        set nu
+        set nopaste
+    else
+        set fdc=0
+        set nonu
+        set paste
+    endif
+
+    if exists("g:loaded_Signature")
+        SignatureToggle
+    endif
+endfunction

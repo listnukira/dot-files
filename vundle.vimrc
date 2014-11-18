@@ -39,6 +39,9 @@ Plugin 'vim-scripts/matchit.zip'
 " Easily delete, change and add surroundings in pairs
 Plugin 'tpope/vim-surround'
 
+" Markdown runtime files
+Plugin 'tpope/vim-markdown'
+
 " End of My bundles
 
 call vundle#end()

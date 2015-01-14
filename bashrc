@@ -11,6 +11,9 @@ alias ls= 'ls --color=auto'
 alias grep='grep --color-auto -n -I'
 alias fgrep='fgrep --color-auto -n -I'
 alias egrep='egrep --color-auto -n -I'
+if [ -f /usr/bin/colordiff ]; then
+    alias diff='colordiff'
+fi
 
 export EDITOR='vim'
 

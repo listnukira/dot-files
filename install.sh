@@ -15,7 +15,7 @@ fi
 
 mkdir -p backup
 
-while getopts bgtv opt
+while getopts abgtv opt
 do
     case $opt in
     a)

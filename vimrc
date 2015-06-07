@@ -100,6 +100,12 @@ imap <F2> <Esc>:w<CR>
 
 nnoremap ; :
 
+" set leader key to ','
+let mapleader = ","
+
+" show command in the bottom
+set showcmd
+
 " Auto close
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {{ {

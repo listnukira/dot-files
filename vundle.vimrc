@@ -39,6 +39,9 @@ Plugin 'vim-scripts/matchit.zip'
 " Easily delete, change and add surroundings in pairs
 Plugin 'tpope/vim-surround'
 
+" Easily commenting
+Plugin 'listnukira/nerdcommenter'
+
 " Markdown runtime files
 Plugin 'tpope/vim-markdown'
 

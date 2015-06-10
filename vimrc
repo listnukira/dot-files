@@ -9,8 +9,8 @@
 
 
 " check vundle
-let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
-if filereadable(vundle_readme)
+let vundle_dir=expand('~/.vim/bundle/Vundle.vim')
+if isdirectory(vundle_dir)
     source ~/.vim/vundle.vimrc
 else
     echo "Installing Vundle..."
@@ -21,20 +21,13 @@ else
     :qa!
 endif
 
-" check neocomplete
-let neocomplete_readme=expand('~/.vim/bundle/neocomplete.vim/README.md')
-if filereadable(neocomplete_readme)
-    source ~/.vim/neocomplete.vimrc
-endif
-
-" check neosnippet
-let neosnippet_readme=expand('~/.vim/bundle/neosnippet.vim/README.md')
-if filereadable(neosnippet_readme)
-    source ~/.vim/neosnippet.vimrc
-endif
 
 
 " personal setting
+
+" set leader key to ','
+let mapleader=","
+
 set nocompatible
 set encoding=utf-8
 set fileencoding=utf-8
@@ -100,9 +93,6 @@ imap <F2> <Esc>:w<CR>
 
 nnoremap ; :
 
-" set leader key to ','
-let mapleader = ","
-
 " show command in the bottom
 set showcmd
 
@@ -127,3 +117,22 @@ function MyDisplayToggle()
         SignatureToggle
     endif
 endfunction
+
+
+" check neocomplete
+let neocomplete_dir=expand('~/.vim/bundle/neocomplete.vim')
+if isdirectory(neocomplete_dir)
+    source ~/.vim/neocomplete.vimrc
+endif
+
+" check neosnippet
+let neosnippet_dir=expand('~/.vim/bundle/neosnippet.vim')
+if isdirectory(neosnippet_dir)
+    source ~/.vim/neosnippet.vimrc
+endif
+
+" check plugin a.vim
+let avim_dir=expand('~/.vim/bundle/a.vim')
+if isdirectory(avim_dir)
+    nmap ~/.vim/neosnippet.vimrc
+endif

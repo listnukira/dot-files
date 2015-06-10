@@ -45,6 +45,9 @@ Plugin 'listnukira/nerdcommenter'
 " Markdown runtime files
 Plugin 'tpope/vim-markdown'
 
+" Alternate files quickly (.c -> .h)
+Plugin 'nacitar/a.vim'
+
 " End of My bundles
 
 call vundle#end()

@@ -134,5 +134,5 @@ endif
 " check plugin a.vim
 let avim_dir=expand('~/.vim/bundle/a.vim')
 if isdirectory(avim_dir)
-    nmap ~/.vim/neosnippet.vimrc
+    nmap <leader>a :A<CR>
 endif

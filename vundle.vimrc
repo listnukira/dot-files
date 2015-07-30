@@ -11,7 +11,10 @@ Plugin 'gmarik/Vundle.vim'
 " My bundles here:
 
 " A low-contrast vim color scheme based on Seoul Colors
-Plugin 'junegunn/seoul256.vim'
+"Plugin 'junegunn/seoul256.vim'
+
+" Solarized color scheme
+Plugin 'altercation/vim-colors-solarized'
 
 " Neocomplete framework
 Plugin 'Shougo/neocomplete.vim'

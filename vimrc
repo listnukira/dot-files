@@ -32,7 +32,9 @@ set nocompatible
 set encoding=utf-8
 set fileencoding=utf-8
 set termencoding=utf-8
-colorscheme seoul256
+"colorscheme seoul256
+colorscheme solarized
+set background=dark
 
 syntax on
 set expandtab

@@ -46,11 +46,11 @@ alias ll='ls -l'
 
 export EDITOR='vim'
 
-if [ -z $TMUX ]; then
-    #export LD_LIBRARY_PATH=/home/chwhsu/local/lib
-    #oexport PATH="/home/chwhsu/local/bin/:$PATH"
-    PATH="$PATH:/opt/nodejs/bin"
-fi
+#if [ -z $TMUX ]; then
+#    export LD_LIBRARY_PATH=/home/chwhsu/local/lib
+#    oexport PATH="/home/chwhsu/local/bin/:$PATH"
+#    PATH="$PATH:/opt/nodejs/bin"
+#fi
 
 #
 # bash prompts
@@ -59,4 +59,4 @@ function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-export PS1="\[\e[0;32m\][\w]\$(parse_git_branch)\n\\$ \[\e[0m\]"
+export PS1="\[\e[0;31m\][\w]\$(parse_git_branch)\n\[\e[0m\]$ "

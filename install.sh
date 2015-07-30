@@ -42,11 +42,13 @@ do
     b)
         [ -e ~/.bashrc ] && cp ~/.bashrc backup/bashrc
         [ -e ~/.bash_profile ] && cp ~/.bash_profile backup/bash_profile
+        [ -e ~/.dircolors ] && cp ~/.dircolors backup/dircolors
 
         cp bashrc ~/.bashrc
         cp bash_profile ~/.bash_profile
+        cp dircolors ~/.dircolors
 
-        echo "Set bashrc, bashr_profile done!"
+        echo "Set bashrc, bashr_profile, dircolors done!"
         ;;
     g)
         [ -e ~/.gitconfig ] && cp ~/.gitconfig backup/gitconfig

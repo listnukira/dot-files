@@ -48,7 +48,7 @@ export EDITOR='vim'
 
 #if [ -z $TMUX ]; then
 #    export LD_LIBRARY_PATH=/home/chwhsu/local/lib
-#    oexport PATH="/home/chwhsu/local/bin/:$PATH"
+#    export PATH="/home/chwhsu/local/bin/:$PATH"
 #    PATH="$PATH:/opt/nodejs/bin"
 #fi
 

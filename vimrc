@@ -24,6 +24,7 @@ endif
 
 
 " personal setting
+syntax on
 
 " set leader key to ','
 let mapleader=","
@@ -35,8 +36,9 @@ set termencoding=utf-8
 "colorscheme seoul256
 colorscheme solarized
 set background=dark
+" Sign Column made by solarized colorscheme is strange, clear it.
+highlight clear SignColumn
 
-syntax on
 set expandtab
 set tabstop=4
 set shiftwidth=4

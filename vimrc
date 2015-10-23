@@ -140,3 +140,17 @@ let avim_dir=expand('~/.vim/bundle/a.vim')
 if isdirectory(avim_dir)
     nmap <leader>a :A<CR>
 endif
+
+" check easymotion
+let easymotion_dir=expand('~/.vim/bundle/vim-eastmotion')
+if isdirectory(easymotion_dir)
+    map <leader> <Plug>(easymotion-prefix)
+    let g:EasyMotion_do_mapping=0
+
+    nmap <leader>s <Plug>(easymotion-s)
+    nmap <leader>s <Plug>(easymotion-s2)
+
+    map <leader>w <Plug>(easymotion-bd-w)
+    map <leader>j <Plug>(easymotion-j)
+    map <leader>k <Plug>(easymotion-k)
+endif

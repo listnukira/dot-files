@@ -8,7 +8,7 @@ call vundle#begin()
 " required!
 Plugin 'gmarik/Vundle.vim'
 
-" My bundles here:
+" My bundles here
 
 " A low-contrast vim color scheme based on Seoul Colors
 "Plugin 'junegunn/seoul256.vim'
@@ -50,6 +50,9 @@ Plugin 'tpope/vim-markdown'
 
 " Alternate files quickly (.c -> .h)
 Plugin 'nacitar/a.vim'
+
+" Easy motion
+Plugin 'easymotion/vim-easymotion'
 
 " End of My bundles
 

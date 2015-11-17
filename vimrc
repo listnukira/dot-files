@@ -142,7 +142,7 @@ if isdirectory(avim_dir)
 endif
 
 " check easymotion
-let easymotion_dir=expand('~/.vim/bundle/vim-eastmotion')
+let easymotion_dir=expand('~/.vim/bundle/vim-easymotion')
 if isdirectory(easymotion_dir)
     map <leader> <Plug>(easymotion-prefix)
     let g:EasyMotion_do_mapping=0

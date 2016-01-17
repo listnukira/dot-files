@@ -45,9 +45,6 @@ Plugin 'tpope/vim-surround'
 " Easily commenting
 Plugin 'listnukira/nerdcommenter'
 
-" Markdown runtime files
-Plugin 'tpope/vim-markdown'
-
 " Alternate files quickly (.c -> .h)
 Plugin 'nacitar/a.vim'
 

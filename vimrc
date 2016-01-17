@@ -50,6 +50,7 @@ set ignorecase
 " detect file types
 filetype plugin indent on
 autocmd FileType make setlocal noexpandtab
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " folding
 set foldmethod=syntax

@@ -51,6 +51,9 @@ Plugin 'nacitar/a.vim'
 " Easy motion
 Plugin 'easymotion/vim-easymotion'
 
+" For tmux.conf syntax highlights
+Plugin 'tmux-plugins/vim-tmux'
+
 " End of My bundles
 
 call vundle#end()

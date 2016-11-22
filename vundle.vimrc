@@ -51,6 +51,9 @@ Plugin 'nacitar/a.vim'
 " Easy motion
 Plugin 'easymotion/vim-easymotion'
 
+" Tagbar
+Plugin 'majutsushi/tagbar'
+
 " For tmux.conf syntax highlights
 Plugin 'tmux-plugins/vim-tmux'
 

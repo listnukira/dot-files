@@ -142,6 +142,13 @@ if isdirectory(avim_dir)
     nmap <leader>a :A<CR>
 endif
 
+" check tagbar
+let tagbar_dir=expand('~/.vim/bundle/tagbar')
+if isdirectory(tagbar_dir)
+    nmap <F5> :TagbarToggle<CR>
+    let g:tagbar_left=1
+endif
+
 " check easymotion
 let easymotion_dir=expand('~/.vim/bundle/vim-easymotion')
 if isdirectory(easymotion_dir)

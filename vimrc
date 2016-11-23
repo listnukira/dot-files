@@ -39,13 +39,15 @@ set background=dark
 " Sign Column made by solarized colorscheme is strange, clear it.
 highlight clear SignColumn
 
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+" tabs are turned into 4 spaces
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set backspace=2
 set number
+
+" search ignores case
 set ignorecase
+" Only case sensitive if a search has a capital
+set smartcase
 
 " detect file types
 filetype plugin indent on
@@ -95,6 +97,10 @@ imap <F1> <Esc>
 map <silent> <F4> :call MyDisplayToggle()<CR>
 nmap <F2> :w<CR>
 imap <F2> <Esc>:w<CR>
+
+" move around windows with Ctrl-direciton
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 
 nnoremap ; :
 

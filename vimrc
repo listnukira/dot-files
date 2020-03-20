@@ -114,29 +114,6 @@ map <CR> o<ESC>k
 set splitbelow
 set splitright
 
-" for cscope use "
-if has("cscope")
-    " 0 : cscope.out first; 1 : ctags first
-    set csto=0
-    set cst
-    set nocsverb
-    " add any database in current directory
-    if filereadable("cscope.out")
-        cs add cscope.out
-    " else add databse pointed to by environment
-    elseif $CSCOPE_DB != ""
-        cs add $CSCOPE_DB
-    endif
-    set csverb
-endif
-
-map g<C-]> :cs find 3 <C-R>=expand("<cword>")<CR><CR>
-nmap <C-\>g : cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-
 " disable F1 built-in help key, remap to Esc
 map <F1> <Esc>
 imap <F1> <Esc>
@@ -197,13 +174,14 @@ endif
 let easymotion_dir=expand('~/.vim/plugged/vim-easymotion')
 if isdirectory(easymotion_dir)
     map <leader> <Plug>(easymotion-prefix)
-    let g:EasyMotion_do_mapping=0
+    let g:EasyMotion_do_mapping=0 " Disable default mappings
+    let g:EasyMotion_smartcase=1 " Turn on case-insensitive feature
 
     nmap <leader>s <Plug>(easymotion-s2)
 
     map <leader>w <Plug>(easymotion-bd-w)
-    map <leader>j <Plug>(easymotion-j)
-    map <leader>k <Plug>(easymotion-k)
+    "nmap <leader>w <Plug>(easymotion-overwin-w) " Move over window
+    map <leader>j <Plug>(easymotion-bd-jk)
 endif
 
 " check CurtineIncSw

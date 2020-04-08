@@ -52,6 +52,10 @@ Plug 'kshenoy/vim-signature'
 " YCM
 Plug 'Valloric/YouCompleteMe'
 
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 call plug#end()
 
 " personal setting
@@ -218,4 +222,10 @@ if isdirectory(YCM)
     let g:ycm_autoclose_preview_window_after_completion=1
     let g:ycm_autoclose_preview_window_after_insertion=1
     nnoremap <leader>gg :YcmCompleter GoTo<CR>
+endif
+
+" check ultisnips
+let UltiSnips=expand('~/.vim/plugged/ultisnips')
+if isdirectory(UltiSnips)
+    let g:UltiSnipsExpandTrigger="<c-j>"
 endif
